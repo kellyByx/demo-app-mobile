@@ -1,0 +1,7 @@
+1.lancer l'application ionic
+    ionic serve
+2. créer une page
+    ionic g page nom_de_la_page
+3. la page est divisée en 3 parties(html, scss, typescript pour la partie logique)
+4. binding {{nom_de_la_variable_que_lon_veut_afficher}}
+5. syntaxe pour les event: (event)

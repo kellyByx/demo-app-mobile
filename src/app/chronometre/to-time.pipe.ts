@@ -14,7 +14,7 @@ export class ToTimePipe implements PipeTransform {
       + ('0'+ secondes).slice(-2) + ':' 
       + ('00'+ millisecondes).slice(-3);
 
-     //ou on peut faire la meme chose mais avec les ternaires:
+    //ou il est possible de faire la meme chose mais avec les ternaires:
      
     //  return(minutes <10) ?'0' + minutes : minutes +':' +
     //       (secondes <10) ? '0' + secondes  : secondes + ':'+ 

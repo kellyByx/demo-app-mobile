@@ -14,6 +14,14 @@ const routes: Routes = [
   {
     path: 'chronometre',
     loadChildren: () => import('./chronometre/chronometre.module').then( m => m.ChronometrePageModule)
+  },
+  {
+    path: 'cart',
+    loadChildren: () => import('./cart/cart.module').then( m => m.CartPageModule)
+  },
+  {
+    path: 'gender',
+    loadChildren: () => import('./gender/gender.module').then( m => m.GenderPageModule)
   }
 ];
 
