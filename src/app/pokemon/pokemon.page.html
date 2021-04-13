@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Pokemon</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="space-beteween">
+    <!--desactive si il n'y a pas de lien pour les pokemon suivant ou précédent-->
+    <!-- null save operator :quand use le ? -->
+    <ion-button [disabled]="!result?.previous" (click)="previous()"
+      >previous</ion-button
+    >
+    <ion-button [disabled]="!result?.next" (click)="next()">next</ion-button>
+  </div>
+
+  <!--affichage simple de la liste des pokemons -->
+  <!--on affiche que si result existe-->
+  <!-- <ul *ngIf="result">
+    <li *ngFor="let item of result.results" (click)="openDetails(item.url)">
+      {{item.name | uppercase}}
+    </li>
+  </ul> -->
+
+  <!-- ou :-->
+  <ul>
+    <li *ngFor="let item of result?.results" (click)="openDetails(item.url)">
+      {{item.name | titlecase}}
+    </li>
+  </ul>
+</ion-content>
